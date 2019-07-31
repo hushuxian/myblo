@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,minimum-scale=0.8,maximum-scale=0.8">
+        <script type="text/javascript">
+            (function(doc) {
+
+                var addEvent = 'addEventListener',
+                    type = 'gesturestart',
+                    qsa = 'querySelectorAll',
+                    scales = [.8, .8],
+                    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+                function fix() {
+                    meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                    doc.removeEventListener(type, fix, true);
+                }
+
+                if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                    fix();
+                    scales = [.9, .9];
+                    doc[addEvent](type, fix, true);
+                }
+            }(document));
+        </script>
+       
+        
+ <!--        <link rel="stylesheet" href="/css/main.css"> -->
+
+
+    </head>
+
+    <body cz-shortcut-listen="true">
+
+
+        <div class="wrapper">
+            <canvas id="mycanvas" width="100%" height="100%"></canvas>
+        </div>
+
+        <script src="/css/bundle.js"></script>     
+       
+    
+    
+</body></html>

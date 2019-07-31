@@ -1,0 +1,25 @@
+1、转载函数，转载完成后不能跳到文章首页，传入的post无效
+
+
+
+2、使用generic-pool 创建连接池失败
+
+var pool = poolModule.createPool({
+	name : 'mongoPool',
+	create : function(callback){
+		var mongodb = Db();
+		mongodb.open(function(err,db){
+			callback(err,db)
+		})
+	},
+	destroy : function(mongodb){
+		mongodb.close();
+	},
+	max : 100,
+	min : 5,
+	indelTimeoutlMillis : 30000,
+	log : true
+})
+
+
+callback不是函数，

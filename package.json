@@ -1,0 +1,27 @@
+{
+  "name": "blo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "async": "*",
+    "bson": "^4.0.1",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "0.4.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "generic-pool": "^3.6.1",
+    "http-errors": "~1.6.2",
+    "markdown": "0.5.0",
+    "mongodb": "^2.2.36",
+    "morgan": "^1.9.1",
+    "multer": "0.1.6",
+    "supervisor": "^0.12.0"
+  }
+}
